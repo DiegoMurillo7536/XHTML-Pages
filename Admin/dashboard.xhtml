@@ -43,7 +43,7 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- Logo -->
-                    <a class="navbar-brand" href="dashboard.jsf">
+                    <h:link class="navbar-brand" outcome="dashboard.xhtml">
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!-- Dark Logo icon -->
@@ -55,7 +55,7 @@
                             <!-- dark Logo text -->
                             <p>Tun Tun</p>
                         </span>
-                    </a>
+                    </h:link>
                     <!-- End Logo -->
                     <!-- toggle and nav items -->
                     <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none" 
@@ -67,9 +67,9 @@
                     <ul class="navbar-nav ms-auto d-flex align-items-center">
                         <!-- User profile and search -->
                         <li>
-                            <a class="profile-pic" href="#">
+                            <h:link class="profile-pic" outcome="dashboard.xhtml">
                                 <img src="plugins/images/users/varun.jpg" alt="user-img" width="36"
-                                    class="img-circle"/><span class="text-dark font-medium"> Admin</span></a>
+                                    class="img-circle"/><span class="text-dark font-medium"> Admin</span></h:link>
                         </li>
                         <!-- User profile and search -->
                     </ul>
@@ -86,21 +86,21 @@
                 <nav class="sidebar-nav">
                    <ul id="sidebarnav">
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/index.jsf"
+                            <h:link class="sidebar-link waves-effect waves-dark sidebar-link" outcome="/index.xhtml"
                                 aria-expanded="false">
                                 <i class="bi bi-arrow-left"></i>
                                 <span class="hide-menu bg-transparen">Volver al inicio</span>
-                            </a>
+                            </h:link>
                    
                         </li>
                         
                         <!--User Profile -->
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.jsf"
+                            <h:link class="sidebar-link waves-effect waves-dark sidebar-link" outcome="dashboard.xhtml"
                                 aria-expanded="false">
                                 <i class="fa fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
-                            </a>
+                            </h:link>
                         </li>
                         <li class="sidebar-item pt-2">
                                 <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -108,12 +108,12 @@
                                 </a>
                                 <div class="collapse" id="collapseExample"> 
                                     <ul class="list-group">
-                                        <li class="list-group-item list-group-item-secondary"><a href="recent-concerns.jsf"> Inquietudes más recientes </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="unanswered-concerns.jsf"> Inquietudes no respondidas </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="suggestions.jsf"> Sugerencias </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="problematics.jsf"> Problemáticas más recientes </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="unanswered-problems.jsf"> Problemáticas sin responder </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="qualification-service.jsf">Calificaciónes </a> </li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="recent-concerns.xhtml"> Inquietudes más recientes </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="unanswered-concerns.xhtml"> Inquietudes no respondidas </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="suggestions.xhtml"> Sugerencias </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="problematics.xhtml"> Problemáticas más recientes </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="unanswered-problems.xhtml"> Problemáticas sin responder </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="qualification-service.xhtml">Calificaciónes </h:link> </li>
                                       </ul>
                               </div>
                         </li>
@@ -123,8 +123,8 @@
                             </a>
                           <div class="collapse" id="collapseExample2"> 
                                 <ul class="list-group">
-                                    <li class="list-group-item list-group-item-secondary"><a href="basic-table.jsf"> Últimos registros </a></li>
-                                    <li class="list-group-item list-group-item-secondary"><a href="profile.jsf">Actualización datos </a> </li>
+                                    <li class="list-group-item list-group-item-secondary"><h:link outcome="basic-table.xhtml"> Últimos registros </h:link></li>
+                                    <li class="list-group-item list-group-item-secondary"><h:link outcome="profile.xhtml">Actualización datos </h:link> </li>
                                   </ul>
                           </div>
                     </li>
@@ -134,8 +134,15 @@
                         </a>
                       <div class="collapse" id="collapseExample3"> 
                             <ul class="list-group">
-                                <li class="list-group-item list-group-item-secondary"><a href="#"> Lorem, ipsum. </a></li>
-                                <li class="list-group-item list-group-item-secondary"><a href="#">Lorem, ipsum. </a> </li>
+                                <li class="list-group-item list-group-item-secondary"><h:link  outcome="referenciaP.xhtml"> Referencia Producto </h:link></li>
+                                <li class="list-group-item list-group-item-secondary"><h:link outcome="materiaPrima.xhtml">Materia Prima </h:link> </li>
+                                <li class="list-group-item list-group-item-secondary"><h:link outcome="OrdenP.xhtml">Orden Producccion </h:link> </li>
+								<li class="list-group-item list-group-item-secondary"><h:link outcome="inventario.xhtml">Inventario </h:link> </li>
+								<li class="list-group-item list-group-item-secondary"><h:link outcome="proveedorM.xhtml">Proveedor Materia Prima </h:link> </li>
+								<li class="list-group-item list-group-item-secondary"><h:link outcome="detalleOP.xhtml">Detalle Orden Producccion </h:link> </li>
+								 
+								
+									                              
                               </ul>
                       </div>
                 </li>
@@ -146,8 +153,8 @@
                     </a>
                   <div class="collapse" id="collapseExample4"> 
                         <ul class="list-group">
-                            <li class="list-group-item list-group-item-secondary"><a href="product.jsf"> Productos</a></li>
-                            <li class="list-group-item list-group-item-secondary"><a href="categories.jsf">Categorias</a> </li>
+                            <li class="list-group-item list-group-item-secondary"><h:link outcome="product.xhtml"> Productos</h:link></li>
+                            <li class="list-group-item list-group-item-secondary"><h:link outcome="categories.xhtml">Categorias</h:link> </li>
                           </ul>
                   </div>
             </li>
@@ -157,8 +164,9 @@
                 </a>
               <div class="collapse" id="collapseExample5"> 
                     <ul class="list-group">
-                        <li class="list-group-item list-group-item-secondary"><a href="delivery.jsf"> Envio </a></li>
-                        <li class="list-group-item list-group-item-secondary"><a href="return.jsf"> Devoluciones </a> </li>
+                                            <li class="list-group-item list-group-item-secondary"><h:link outcome="order.xhtml">Pedidos</h:link></li>
+                        <li class="list-group-item list-group-item-secondary"><h:link outcome="delivery.xhtml"> Envio </h:link></li>
+                        <li class="list-group-item list-group-item-secondary"><h:link outcome="return.xhtml"> Devoluciones </h:link> </li>
                       </ul>
               </div>
         </li>
