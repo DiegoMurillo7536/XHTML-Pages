@@ -28,13 +28,14 @@
 </h:head>
 
 <h:body>
+    <!-- Preloader - style you can find in spinners.css
     
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
-    </div>
+    </div> -->
     
     <!-- Main wrapper - style you can find in pages.scss -->
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
@@ -183,6 +184,7 @@
             <!-- End Sidebar scroll-->
         </aside>
         <!-- Aside bar - End -->
+        <!-- Aside bar - End -->
         <!-- End Left Sidebar  -->
         <!-- Page wrapper  -->
         <div class="page-wrapper">
@@ -190,7 +192,7 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Inventario Materia Prima</h4>
+                        <h4 class="page-title">Detalle Pedido Producto</h4>
                     </div>
 
                 </div>
@@ -210,17 +212,22 @@
                                         <thead>
                                             <tr>
                                                 <th class="border-top-0">ID</th>
-                                                <th class="border-top-0">Saldo</th>
-                                                <th class="border-top-0">Nombre Materia Prima</th>
+                                                <th class="border-top-0">ID Pedido</th>
+                                                <th class="border-top-0">ID Producto</th>
+                                                <th class="border-top-0">Valor Total</th>
+                                                <th class="border-top-0">Cantidad Total</th>
+                                    
                                                 <th class="bordert-top-0">Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td class="txt-oflo">213123</td>
-                                                <td class="txt-oflo">Hilasas</td>
-                                                <td class="txt-oflo">
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td class="txt-oflo">150.000</td>
+                                                <td class="txt-oflo">45</td>
+                                                <td>
                                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                                         data-bs-target="#editarP">
                                                         Editar
@@ -256,7 +263,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Agregar Proveedor Materia Prima</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Agregar Detalle Pedido Producto</h5>
                             </div>
                             <form onsubmit="return validarped()">
                                 <div class="modal-body">
@@ -266,15 +273,26 @@
                                             placeholder="Ingresar ID"/>
                                     </div>
                                     <div class="form-group">
-                                        <label> Saldo </label>
-                                        <input name="feped" id="feped" type="text" class="form-control"
-                                            placeholder="Ingresar Nombre"/>
+                                        <label> ID Producto </label>
+                                        <input name="idped" id="idped" type="text" class="form-control"
+                                            placeholder="Ingresar ID"/>
                                     </div>
                                     <div class="form-group">
-                                        <label>Nombre Materia Prima</label>
+                                        <label> ID Pedido </label>
+                                        <input name="idped" id="idped" type="text" class="form-control"
+                                            placeholder="Ingresar ID"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> Valor </label>
+                                        <input name="feped" id="feped" type="text" class="form-control"
+                                            placeholder="Ingresar Valor"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Cantidad</label>
                                         <input name="fepedd" id="fepedd" type="text" class="form-control"
-                                            placeholder="Ingresar Nombre"/>
-                                    </div>  
+                                            placeholder="Ingresar Cantidad"/>
+                                    </div>
+                                   
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Cerrar</button>

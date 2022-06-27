@@ -28,13 +28,14 @@
 </h:head>
 
 <h:body>
+    <!-- Preloader - style you can find in spinners.css
     
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
-    </div>
+    </div> -->
     
     <!-- Main wrapper - style you can find in pages.scss -->
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
@@ -190,7 +191,7 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Inventario Materia Prima</h4>
+                        <h4 class="page-title">Orden Produccion</h4>
                     </div>
 
                 </div>
@@ -210,16 +211,25 @@
                                         <thead>
                                             <tr>
                                                 <th class="border-top-0">ID</th>
-                                                <th class="border-top-0">Saldo</th>
-                                                <th class="border-top-0">Nombre Materia Prima</th>
+                                                <th class="border-top-0">ID Carrito de Compras</th>
+                                                 <th class="border-top-0">ID Método de Pago</th>
+                                                 <th class="border-top-0">ID Periodo</th>
+                                                <th class="border-top-0">Codigo Factura</th>
+                                                <th class="border-top-0">Fecha Factura</th>
+                                                 <th class="border-top-0">Valor Factura</th>
+                                                 
                                                 <th class="bordert-top-0">Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td class="txt-oflo">213123</td>
-                                                <td class="txt-oflo">Hilasas</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td class="txt-oflo">F01</td>
+                                                <td class="txt-oflo">2022-02-02</td>
+                                                <td class="txt-oflo">50.000</td>
                                                 <td class="txt-oflo">
                                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                                         data-bs-target="#editarP">
@@ -256,7 +266,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Agregar Proveedor Materia Prima</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Agregar 	Factura</h5>
                             </div>
                             <form onsubmit="return validarped()">
                                 <div class="modal-body">
@@ -266,15 +276,39 @@
                                             placeholder="Ingresar ID"/>
                                     </div>
                                     <div class="form-group">
-                                        <label> Saldo </label>
+                                        <label> ID Carrito </label>
+                                        <input name="idped" id="idped" type="text" class="form-control"
+                                            placeholder="Ingresar ID"/>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label> ID Método de Pago </label>
+                                        <input name="idped" id="idped" type="text" class="form-control"
+                                            placeholder="Ingresar ID"/>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label> ID de Periodo </label>
+                                        <input name="idped" id="idped" type="text" class="form-control"
+                                            placeholder="Ingresar ID"/>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label> Codigo </label>
                                         <input name="feped" id="feped" type="text" class="form-control"
-                                            placeholder="Ingresar Nombre"/>
+                                            placeholder="Ingresar Codigo"/>
                                     </div>
                                     <div class="form-group">
-                                        <label>Nombre Materia Prima</label>
+                                        <label>Fecha</label>
                                         <input name="fepedd" id="fepedd" type="text" class="form-control"
-                                            placeholder="Ingresar Nombre"/>
-                                    </div>  
+                                            placeholder="Ingresar Fecha"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Valor de la factura</label>
+                                        <input name="fepedd" id="fepedd" type="text" class="form-control"
+                                            placeholder="Ingresar cantidad"/>
+                                    </div>
+                                   
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Cerrar</button>
