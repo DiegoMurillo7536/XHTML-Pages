@@ -108,8 +108,12 @@
                                 </a>
                                 <div class="collapse" id="collapseExample"> 
                                     <ul class="list-group">
-                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="PQRS.xhtml"> PQRS </h:link></li>     
-                                         <li class="list-group-item list-group-item-secondary"><h:link outcome="RespuestaPQR.xhtml"> Respuestas PQRS </h:link></li>                                    
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="recent-concerns.xhtml"> Inquietudes más recientes </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="unanswered-concerns.xhtml"> Inquietudes no respondidas </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="suggestions.xhtml"> Sugerencias </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="problematics.xhtml"> Problemáticas más recientes </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="unanswered-problems.xhtml"> Problemáticas sin responder </h:link></li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="qualification-service.xhtml">Calificaciónes </h:link> </li>
                                       </ul>
                               </div>
                         </li>
@@ -119,9 +123,6 @@
                             </a>
                           <div class="collapse" id="collapseExample2"> 
                                 <ul class="list-group">
-                                	<li class="list-group-item list-group-item-secondary"><h:link outcome="tipodoc.xhtml"> Tipo de Documento </h:link></li>                                                                
-									<li class="list-group-item list-group-item-secondary"><h:link outcome="roles.xhtml"> Roles </h:link></li>           
-									<li class="list-group-item list-group-item-secondary"><h:link outcome="privilegios.xhtml"> Privilegios </h:link></li>                                							                     
                                     <li class="list-group-item list-group-item-secondary"><h:link outcome="basic-table.xhtml"> Últimos registros </h:link></li>
                                     <li class="list-group-item list-group-item-secondary"><h:link outcome="profile.xhtml">Actualización datos </h:link> </li>
                                   </ul>
@@ -135,7 +136,7 @@
                             <ul class="list-group">
                                 <li class="list-group-item list-group-item-secondary"><h:link  outcome="referenciaP.xhtml"> Referencia Producto </h:link></li>
                                 <li class="list-group-item list-group-item-secondary"><h:link outcome="materiaPrima.xhtml">Materia Prima </h:link> </li>
-                                <li class="list-group-item list-group-item-secondary"><h:link outcome="ordenP.xhtml">Orden Producccion </h:link> </li>
+                                <li class="list-group-item list-group-item-secondary"><h:link outcome="OrdenP.xhtml">Orden Producccion </h:link> </li>
 								<li class="list-group-item list-group-item-secondary"><h:link outcome="inventario.xhtml">Inventario </h:link> </li>
 								<li class="list-group-item list-group-item-secondary"><h:link outcome="proveedorM.xhtml">Proveedor Materia Prima </h:link> </li>
 								<li class="list-group-item list-group-item-secondary"><h:link outcome="detalleOP.xhtml">Detalle Orden Producccion </h:link> </li>
@@ -152,8 +153,6 @@
                     </a>
                   <div class="collapse" id="collapseExample4"> 
                         <ul class="list-group">
-							<li class="list-group-item list-group-item-secondary"><h:link outcome="metodopago.xhtml"> Método de Pago</h:link></li>
-							<li class="list-group-item list-group-item-secondary"><h:link outcome="metodopago.xhtml"> Factura</h:link></li>                  
                             <li class="list-group-item list-group-item-secondary"><h:link outcome="product.xhtml"> Productos</h:link></li>
                             <li class="list-group-item list-group-item-secondary"><h:link outcome="categories.xhtml">Categorias</h:link> </li>
                           </ul>
@@ -164,11 +163,8 @@
                     <i class="fa fa-truck" aria-hidden="true"></i>  Envios y Devoluciones
                 </a>
               <div class="collapse" id="collapseExample5"> 
-                    <ul class="list-group">                    
-                    <li class="list-group-item list-group-item-secondary"><h:link outcome="almacenes.xhtml">Almacenes</h:link></li>
-                    <li class="list-group-item list-group-item-secondary"><h:link outcome="compañiaenvio.xhtml">Compañías de Envío</h:link></li>
-                         <li class="list-group-item list-group-item-secondary"><h:link outcome="order.xhtml">Pedidos</h:link></li>
-                         <li class="list-group-item list-group-item-secondary"><h:link outcome="detallepedidop.xhtml">Detalle de los Pedidos</h:link></li>
+                    <ul class="list-group">
+                                            <li class="list-group-item list-group-item-secondary"><h:link outcome="order.xhtml">Pedidos</h:link></li>
                         <li class="list-group-item list-group-item-secondary"><h:link outcome="delivery.xhtml"> Envio </h:link></li>
                         <li class="list-group-item list-group-item-secondary"><h:link outcome="return.xhtml"> Devoluciones </h:link> </li>
                       </ul>
@@ -276,7 +272,7 @@
                                         <tr>
                                             <td>3</td>
                                             <td class="txt-oflo">Valentina</td>
-                                            <td>Vendido</td>	
+                                            <td>Vendido</td>
                                             <td class="txt-oflo">01/03/2022</td>
                                             <td><span class="text-success">30.000
                                                 </span></td>
