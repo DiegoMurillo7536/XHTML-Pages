@@ -79,28 +79,28 @@
         <!-- End Topbar header -->
 
         <!-- Aside bar - Start-->
-        <aside class="left-sidebar" data-sidebarbg="skin6">
+         <aside class="left-sidebar" data-sidebarbg="skin6">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar scrollsa">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                    <ul id="sidebarnav">
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/index.jsf"
+                            <h:link class="sidebar-link waves-effect waves-dark sidebar-link" outcome="/index.xhtml"
                                 aria-expanded="false">
                                 <i class="bi bi-arrow-left"></i>
                                 <span class="hide-menu bg-transparen">Volver al inicio</span>
-                            </a>
+                            </h:link>
                    
                         </li>
                         
                         <!--User Profile -->
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.jsf"
+                            <h:link class="sidebar-link waves-effect waves-dark sidebar-link" outcome="dashboard.xhtml"
                                 aria-expanded="false">
                                 <i class="fa fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
-                            </a>
+                            </h:link>
                         </li>
                         <li class="sidebar-item pt-2">
                                 <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -108,12 +108,8 @@
                                 </a>
                                 <div class="collapse" id="collapseExample"> 
                                     <ul class="list-group">
-                                        <li class="list-group-item list-group-item-secondary"><a href="recent-concerns.jsf"> Inquietudes más recientes </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="unanswered-concerns.jsf"> Inquietudes no respondidas </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="suggestions.jsf"> Sugerencias </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="problematics.jsf"> Problemáticas más recientes </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="unanswered-problems.jsf"> Problemáticas sin responder </a></li>
-                                        <li class="list-group-item list-group-item-secondary"><a href="qualification-service.jsf"> <p class="text-dark">Calificación del servicio</p> </a> </li>
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="PQRS.xhtml"> PQRS </h:link></li>     
+                                         <li class="list-group-item list-group-item-secondary"><h:link outcome="RespuestaPQR.xhtml"> Respuestas PQRS </h:link></li>                                    
                                       </ul>
                               </div>
                         </li>
@@ -123,8 +119,11 @@
                             </a>
                           <div class="collapse" id="collapseExample2"> 
                                 <ul class="list-group">
-                                    <li class="list-group-item list-group-item-secondary"><a href="basic-table.jsf"> Últimos registros </a></li>
-                                    <li class="list-group-item list-group-item-secondary"><a href="profile.jsf">Actualización datos </a> </li>
+                                	<li class="list-group-item list-group-item-secondary"><h:link outcome="tipodoc.xhtml"> Tipo de Documento </h:link></li>                                                                
+									<li class="list-group-item list-group-item-secondary"><h:link outcome="roles.xhtml"> Roles </h:link></li>           
+									<li class="list-group-item list-group-item-secondary"><h:link outcome="privilegios.xhtml"> Privilegios </h:link></li>                                							                     
+                                    <li class="list-group-item list-group-item-secondary"><h:link outcome="basic-table.xhtml"> Últimos registros </h:link></li>
+                                    <li class="list-group-item list-group-item-secondary"><h:link outcome="profile.xhtml">Actualización datos </h:link> </li>
                                   </ul>
                           </div>
                     </li>
@@ -134,8 +133,15 @@
                         </a>
                       <div class="collapse" id="collapseExample3"> 
                             <ul class="list-group">
-                                <li class="list-group-item list-group-item-secondary"><a href="#"> Lorem, ipsum. </a></li>
-                                <li class="list-group-item list-group-item-secondary"><a href="#">Lorem, ipsum. </a> </li>
+                                <li class="list-group-item list-group-item-secondary"><h:link  outcome="referenciaP.xhtml"> Referencia Producto </h:link></li>
+                                <li class="list-group-item list-group-item-secondary"><h:link outcome="materiaPrima.xhtml">Materia Prima </h:link> </li>
+                                <li class="list-group-item list-group-item-secondary"><h:link outcome="ordenP.xhtml">Orden Producccion </h:link> </li>
+								<li class="list-group-item list-group-item-secondary"><h:link outcome="inventario.xhtml">Inventario </h:link> </li>
+								<li class="list-group-item list-group-item-secondary"><h:link outcome="proveedorM.xhtml">Proveedor Materia Prima </h:link> </li>
+								<li class="list-group-item list-group-item-secondary"><h:link outcome="detalleOP.xhtml">Detalle Orden Producccion </h:link> </li>
+								 
+								
+									                              
                               </ul>
                       </div>
                 </li>
@@ -146,32 +152,35 @@
                     </a>
                   <div class="collapse" id="collapseExample4"> 
                         <ul class="list-group">
-                            <li class="list-group-item list-group-item-secondary"><a href="product.jsf"> Productos</a></li>
-                            <li class="list-group-item list-group-item-secondary"><a href="categories.jsf">Categorias</a> </li>
+							<li class="list-group-item list-group-item-secondary"><h:link outcome="metodopago.xhtml"> Método de Pago</h:link></li>
+							<li class="list-group-item list-group-item-secondary"><h:link outcome="metodopago.xhtml"> Factura</h:link></li>                  
+                            <li class="list-group-item list-group-item-secondary"><h:link outcome="product.xhtml"> Productos</h:link></li>
+                            <li class="list-group-item list-group-item-secondary"><h:link outcome="categories.xhtml">Categorias</h:link> </li>
                           </ul>
                   </div>
             </li>
             <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse"
-                                href="#collapseExample5" role="button" aria-expanded="false"
-                                aria-controls="collapseExample">
-                                
-                                <i class="fa fa-truck" aria-hidden="true"></i> Envios y Devoluciones
-                            </a>
-                            <div class="collapse" id="collapseExample5">
-                        <ul class="list-group">
-                              <li class="list-group-item list-group-item-secondary"><a href="order.jsf"> Pedidos </a> </li>
-                              <li class="list-group-item list-group-item-secondary"><a href="delivery.jsf"> Envio </a></li>
-                              <li class="list-group-item list-group-item-secondary"><a href="return.jsf"> Devoluciones </a> </li>
-                        </ul>
-                 </div>
-         	</li>
-</ul>
+                <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa fa-truck" aria-hidden="true"></i>  Envios y Devoluciones
+                </a>
+              <div class="collapse" id="collapseExample5"> 
+                    <ul class="list-group">                    
+                    <li class="list-group-item list-group-item-secondary"><h:link outcome="almacenes.xhtml">Almacenes</h:link></li>
+                    <li class="list-group-item list-group-item-secondary"><h:link outcome="compañiaenvio.xhtml">Compañías de Envío</h:link></li>
+                         <li class="list-group-item list-group-item-secondary"><h:link outcome="order.xhtml">Pedidos</h:link></li>
+                         <li class="list-group-item list-group-item-secondary"><h:link outcome="detallepedidop.xhtml">Detalle de los Pedidos</h:link></li>
+                        <li class="list-group-item list-group-item-secondary"><h:link outcome="delivery.xhtml"> Envio </h:link></li>
+                        <li class="list-group-item list-group-item-secondary"><h:link outcome="return.xhtml"> Devoluciones </h:link> </li>
+                      </ul>
+              </div>
+        </li>
+		</ul>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->
         </aside>
+        <!-- Aside bar - End -->
         <!-- Aside bar - End -->
         
         <!-- Page wrapper  -->

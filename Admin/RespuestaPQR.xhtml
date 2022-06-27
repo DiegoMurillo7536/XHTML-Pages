@@ -13,7 +13,7 @@
     <meta name="description"
         content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework"></meta>
     <meta name="robots" content="noindex,nofollow"></meta>
-    <title>Tun Tun</title>
+    <title>Admin | Tun Tun</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logo/logo.png"/>
@@ -25,23 +25,17 @@
     <link rel="stylesheet" href="/Admin/css/stylesadmin.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
 
-    <!-- Scripts Tabla -->
-
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-
 </h:head>
 
 <h:body>
+    
     
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
-    </div>
-    
+    </div> 
     
     <!-- Main wrapper - style you can find in pages.scss -->
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
@@ -51,7 +45,7 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- Logo -->
-                    <a class="navbar-brand" href="dashboard.jsf">
+                    <a class="navbar-brand" href="dashboard.html">
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!-- Dark Logo icon -->
@@ -198,7 +192,7 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Proveedor Materia Prima</h4>
+                        <h4 class="page-title">PQRS</h4>
                     </div>
 
                 </div>
@@ -218,20 +212,26 @@
                                         <thead>
                                             <tr>
                                                 <th class="border-top-0">ID</th>
-                                                <th class="border-top-0">Nombre</th>
-                                                <th class="border-top-0">Telefono</th>
-                                                <th class="border-top-0">Direccion</th>
-                                                <th class="border-top-0">Nombre Materia Prima</th>
-                                                <th class="bordert-top-0">Acciones</th>
+                                                <th class="border-top-0">ID de la PQR</th>
+                                                <th class="border-top-0">Respuesta de  PQR</th>
+                                                <th class="border-top-0">Fecha Respuesta</th>
+                                                <th class="border-top-0">Estado</th>
+                                                <th class="border-top-0">Respondida Por</th>
+                                               
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td class="txt-oflo">Santiago</td>
-                                                <td class="txt-oflo">3143611410</td>
-                                                <td class="txt-oflo">Calle 26</td>
-                                                <td class="txt-oflo">Hilasas</td>
+                                                <td>1</td>
+                                                <td class="txt-oflo"> Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing.</td>
+                                                    <td class="txt-oflo">02/02/2022</td>
+                                                <td class="txt-oflo">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing.</td>
+                                                <td class="txt-oflo">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing.</td>
+                                               
                                                 <td class="txt-oflo">
                                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                                         data-bs-target="#editarP">
@@ -268,34 +268,41 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Agregar Proveedor Materia Prima</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Agregar Respuesta PQR</h5>
                             </div>
                             <form onsubmit="return validarped()">
                                 <div class="modal-body">
+                                   
                                     <div class="form-group">
-                                        <label> ID </label>
+                                        <label> ID  </label>
                                         <input name="idped" id="idped" type="text" class="form-control"
                                             placeholder="Ingresar ID"/>
                                     </div>
                                     <div class="form-group">
-                                        <label> Nombre </label>
+                                        <label> ID de la PQR  </label>
+                                        <input name="idped" id="idped" type="text" class="form-control"
+                                            placeholder="Ingresar ID"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> Respuesta de la PQR </label>
                                         <input name="feped" id="feped" type="text" class="form-control"
-                                            placeholder="Ingresar Nombre"/>
+                                            placeholder="Ingresar Fecha"/>
                                     </div>
                                     <div class="form-group">
-                                        <label>Telefono</label>
+                                        <label>Fecha de la PQR</label>
                                         <input name="fepedd" id="fepedd" type="text" class="form-control"
-                                            placeholder="Ingresar Telefono"/>
+                                            placeholder="Ingresar Observacion"/>
                                     </div>
                                     <div class="form-group">
-                                        <label>Direccion</label>
+                                        <label>Estado de la PQR</label>
                                         <input name="fepedd" id="fepedd" type="text" class="form-control"
-                                            placeholder="Ingresar Direccion"/>
+                                            placeholder="Ingresar Cantidad"/>
                                     </div>
+                                    
                                     <div class="form-group">
-                                        <label>Nombre Materia Prima</label>
+                                        <label>Nombre de Administrador</label>
                                         <input name="fepedd" id="fepedd" type="text" class="form-control"
-                                            placeholder="Ingresar Nombre"/>
+                                            placeholder="Ingresar Saldo"/>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
@@ -338,7 +345,8 @@
                         </div>
                     </div>
                 </div>
-</div>
+
+            </div>
             </div>
             <!-- End Page wrapper  -->
         </div>
