@@ -26,14 +26,14 @@
 
 <h:body>
 
-  <!-- Preloader 
+ 
   <div class="preloader">
     <div class="lds-ripple">
       <div class="lds-pos"></div>
       <div class="lds-pos"></div>
     </div>
   </div>
-   -->
+   
   
   <!-- Main wrapper -->
   <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
@@ -80,117 +80,107 @@
 
     <!-- Aside bar - Start-->
     <aside class="left-sidebar" data-sidebarbg="skin6">
-      <!-- Sidebar scroll-->
-      <div class="scroll-sidebar scrollsa">
-        <!-- Sidebar navigation-->
-        <nav class="sidebar-nav">
-          <ul id="sidebarnav">
-            <li class="sidebar-item pt-2">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/index.jsf" aria-expanded="false">
-                <i class="bi bi-arrow-left"></i>
-                <span class="hide-menu bg-transparen">Volver al inicio</span>
-              </a>
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar scrollsa">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                   <ul id="sidebarnav">
+                        <li class="sidebar-item pt-2">
+                            <h:link class="sidebar-link waves-effect waves-dark sidebar-link" outcome="/index.xhtml"
+                                aria-expanded="false">
+                                <i class="bi bi-arrow-left"></i>
+                                <span class="hide-menu bg-transparen">Volver al inicio</span>
+                            </h:link>
+                   
+                        </li>
+                        
+                        <!--User Profile -->
+                        <li class="sidebar-item">
+                            <h:link class="sidebar-link waves-effect waves-dark sidebar-link" outcome="dashboard.xhtml"
+                                aria-expanded="false">
+                                <i class="fa fa-clock" aria-hidden="true"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </h:link>
+                        </li>
+                        <li class="sidebar-item pt-2">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <i class="fa fa-users" aria-hidden="true"></i>  Fidelización del cliente
+                                </a>
+                                <div class="collapse" id="collapseExample"> 
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-group-item-secondary"><h:link outcome="PQRS.xhtml"> PQRS </h:link></li>     
+                                         <li class="list-group-item list-group-item-secondary"><h:link outcome="RespuestaPQR.xhtml"> Respuestas PQRS </h:link></li>                                    
+                                      </ul>
+                              </div>
+                        </li>
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <i class="fa fa-user" aria-hidden="true"></i>  Gestión de usuario
+                            </a>
+                          <div class="collapse" id="collapseExample2"> 
+                                <ul class="list-group">
+                                	<li class="list-group-item list-group-item-secondary"><h:link outcome="tipodoc.xhtml"> Tipo de Documento </h:link></li>                                                                
+									<li class="list-group-item list-group-item-secondary"><h:link outcome="roles.xhtml"> Roles </h:link></li>           
+									<li class="list-group-item list-group-item-secondary"><h:link outcome="privilegios.xhtml"> Privilegios </h:link></li>                                							                     
+                                    <li class="list-group-item list-group-item-secondary"><h:link outcome="basic-table.xhtml"> Últimos registros </h:link></li>
+                                    <li class="list-group-item list-group-item-secondary"><h:link outcome="profile.xhtml">Actualización datos </h:link> </li>
+                                  </ul>
+                          </div>
+                    </li>
+                    <li class="sidebar-item pt-2">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="fa fa-box" aria-hidden="true"></i>  Inventario
+                        </a>
+                      <div class="collapse" id="collapseExample3"> 
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-secondary"><h:link  outcome="referenciaP.xhtml"> Referencia Producto </h:link></li>
+                                <li class="list-group-item list-group-item-secondary"><h:link outcome="materiaPrima.xhtml">Materia Prima </h:link> </li>
+                                <li class="list-group-item list-group-item-secondary"><h:link outcome="ordenP.xhtml">Orden Producccion </h:link> </li>
+								<li class="list-group-item list-group-item-secondary"><h:link outcome="inventario.xhtml">Inventario </h:link> </li>
+								<li class="list-group-item list-group-item-secondary"><h:link outcome="proveedorM.xhtml">Proveedor Materia Prima </h:link> </li>
+								<li class="list-group-item list-group-item-secondary"><h:link outcome="detalleOP.xhtml">Detalle Orden Producccion </h:link> </li>
+								 
+								
+									                              
+                              </ul>
+                      </div>
+                </li>
 
-            </li>
-
-            <!--User Profile -->
-            <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.jsf" aria-expanded="false">
-                <i class="fa fa-clock" aria-hidden="true"></i>
-                <span class="hide-menu">Dashboard</span>
-              </a>
-            </li>
-            <li class="sidebar-item pt-2">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse"
-                href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fa fa-users" aria-hidden="true"></i> Fidelización del cliente
-              </a>
-              <div class="collapse" id="collapseExample">
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-secondary"><a href="recent-concerns.jsf"> Inquietudes más
-                      recientes </a></li>
-                  <li class="list-group-item list-group-item-secondary"><a href="unanswered-concerns.jsf">
-                      <p class="text-dark">Inquietudes no respondidas</p>
-                    </a></li>
-                  <li class="list-group-item list-group-item-secondary"><a href="suggestions.jsf"> Sugerencias </a>
-                  </li>
-                  <li class="list-group-item list-group-item-secondary"><a href="problematics.jsf"> Problemáticas más
-                      recientes </a></li>
-                  <li class="list-group-item list-group-item-secondary"><a href="unanswered-problems.jsf">
-                      Problemáticas sin responder </a></li>
-                  <li class="list-group-item list-group-item-secondary"><a
-                      href="qualification-service.jsf">Calificaciónes </a> </li>
-                </ul>
-              </div>
+                <li class="sidebar-item pt-2">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa fa-box" aria-hidden="true"></i>  Ventas
+                    </a>
+                  <div class="collapse" id="collapseExample4"> 
+                        <ul class="list-group">
+							<li class="list-group-item list-group-item-secondary"><h:link outcome="metodopago.xhtml"> Método de Pago</h:link></li>
+							<li class="list-group-item list-group-item-secondary"><h:link outcome="metodopago.xhtml"> Factura</h:link></li>                  
+                            <li class="list-group-item list-group-item-secondary"><h:link outcome="product.xhtml"> Productos</h:link></li>
+                            <li class="list-group-item list-group-item-secondary"><h:link outcome="categories.xhtml">Categorias</h:link> </li>
+                          </ul>
+                  </div>
             </li>
             <li class="sidebar-item pt-2">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse"
-                href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fa fa-user" aria-hidden="true"></i> Gestión de usuario
-              </a>
-              <div class="collapse" id="collapseExample2">
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-secondary"><a href="basic-table.jsf"> Últimos registros
-                    </a></li>
-                  <li class="list-group-item list-group-item-secondary"><a href="profile.jsf">Actualización datos </a>
-                  </li>
-                </ul>
+                <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa fa-truck" aria-hidden="true"></i>  Envios y Devoluciones
+                </a>
+              <div class="collapse" id="collapseExample5"> 
+                    <ul class="list-group">                    
+                    <li class="list-group-item list-group-item-secondary"><h:link outcome="almacenes.xhtml">Almacenes</h:link></li>
+                    <li class="list-group-item list-group-item-secondary"><h:link outcome="compañiaenvio.xhtml">Compañías de Envío</h:link></li>
+                         <li class="list-group-item list-group-item-secondary"><h:link outcome="order.xhtml">Pedidos</h:link></li>
+                         <li class="list-group-item list-group-item-secondary"><h:link outcome="detallepedidop.xhtml">Detalle de los Pedidos</h:link></li>
+                        <li class="list-group-item list-group-item-secondary"><h:link outcome="delivery.xhtml"> Envio </h:link></li>
+                        <li class="list-group-item list-group-item-secondary"><h:link outcome="return.xhtml"> Devoluciones </h:link> </li>
+                      </ul>
               </div>
-            </li>
-            <li class="sidebar-item pt-2">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse"
-                href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fa fa-box" aria-hidden="true"></i> Inventario
-              </a>
-              <div class="collapse" id="collapseExample3">
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-secondary"><a href="referenciaP.jsf">Referencia
-                      Producto</a></li>
-                  <li class="list-group-item list-group-item-secondary"><a href="materiaPrima.jsf">Materia Prima</a>
-                  </li>
-                  <li class="list-group-item list-group-item-secondary"><a href="ordenP.jsf">Orden
-                      Produccion</a></li>
-                  <li class="list-group-item list-group-item-secondary"><a href="inventario.jsf">Inventario Materia
-                      Prima</a></li>
-                  <li class=" list-group-item list-group-item-secondary"><a href="proveedorM.jsf">Proveedor Materia
-                      Prima</a></li>
-                  <li class="list-group-item list-group-item-secondary"><a href="detalleOP.jsf">Detalle Orden
-                      Produccion</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="sidebar-item pt-2">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse"
-                href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fa fa-box" aria-hidden="true"></i> Ventas
-              </a>
-              <div class="collapse" id="collapseExample4">
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-secondary"><a href="product.jsf"> Productos</a></li>
-                  <li class="list-group-item list-group-item-secondary"><a href="categories.jsf">Categorias</a> </li>
-                </ul>
-              </div>
-            </li>
-            <li class="sidebar-item pt-2">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" data-bs-toggle="collapse"
-                href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fa fa-truck" aria-hidden="true"></i> Envios y Devoluciones
-              </a>
-              <div class="collapse" id="collapseExample5">
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-secondary"><a href="order.jsf"> Pedidos </a> </li>
-                  <li class="list-group-item list-group-item-secondary"><a href="delivery.jsf"> Envio </a></li>
-                  <li class="list-group-item list-group-item-secondary"><a href="return.jsf"> Devoluciones </a> </li>
-                </ul>
-              </div>
-            </li>
-</ul>
-        </nav>
-        <!-- End Sidebar navigation -->
-      </div>
-      <!-- End Sidebar scroll-->
-    </aside>
+        </li>
+		</ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- Aside bar - End -->
     <!-- Aside bar - End -->
 
     <!-- Page wrapper  -->
